@@ -1,6 +1,6 @@
 ![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&text=Welcome!%20&fontSize=60&fontAlignY=40&desc=I'm%20joonho)
 
-$$\theta^*_\tau = \mathcal{A_\phi}(\mathcal{L}_\tau,\mathcal{D}_\tau^{\text{train}},f_\theta)$$
+$$\theta^*_\tau \leftarrow \mathcal{A_\phi}(\mathcal{L}_\tau,\mathcal{D}_\tau^{\text{train}},f_\theta)$$
 
 ### pytorch_summary1
 * tensor 생성 ( torch.ones, torch.rand_like, torch.arange )
