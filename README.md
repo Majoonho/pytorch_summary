@@ -2,7 +2,7 @@
 
 $$\theta^*_\tau \leftarrow \mathcal{A_\phi}(\mathcal{L}_\tau,\mathcal{D}_\tau^{\text{train}},\mathcal{f}_\theta)$$
 
-$$m(\theta^*_\tau)\leftarrow \mathcal{P}_\tau,(\mathcal{D}_\tau^{\text{valid}},\mathcal{f}_\theta_\tau)$$
+$$m(\theta^*_\tau)\leftarrow \mathcal{P}_\tau(\mathcal{D}_\tau^{\text{valid}},\mathcal{f}_\theta_\tau)$$
 
 ### pytorch_summary1
 * tensor 생성 ( torch.ones, torch.rand_like, torch.arange )
