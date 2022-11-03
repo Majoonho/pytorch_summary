@@ -13,7 +13,7 @@ $$m(\theta^*_\tau)\leftarrow \mathcal{P}_\tau(\mathcal{D}_\tau^{\text{valid}},\m
 * tensor 조작 ( reshape, torch.cat(dim=0(row) dim=1(columns), squeeze, unsqueeze )
 
 ### pytorch_summary2
-* layer를 커스텀
+* CNN layer 커스텀
   * layer의 층이 많아 지는 것보다 깊이를 깊게 하는 것이 성능이 더 잘 나올 수 있습니다.
   * Batch Normalization 을 하면 성능이 좋아집니다. (단, layer만 많으면 효과가 없음)
   * pooling 의 유무에 따라 성능, 속도에서 차이가 많이 납니다. (있는게 훨씬 좋음)
