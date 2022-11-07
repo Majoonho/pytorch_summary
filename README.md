@@ -20,3 +20,12 @@ $$m(\theta^*_\tau)\leftarrow \mathcal{P}_\tau(\mathcal{D}_\tau^{\text{valid}},\m
   * dropout는 BN을 사용해서인지 드라마틱한 성능을 보이진 않았습니다.
   * learing rate 에 따라 성능차이가 확연히 차이납니다.
 
+### pytorch_summary3
+* U-net 을 구현해보고 skip connection 이해
+  * skip connection 은 concat 과 add 두가지 방식이 있습니다.
+  * U-net 은 concat 을 사용하기 때문에, up-conv를 할때 dimension을 줄어야 합니다.
+  * 그래야 concat 했을 때 원래 차원의 사이즈를 가질 수 있기 때문입니다.
+   * Residual Learning : x를 input으로 하여 output도 자기자신(x)을 타겟으로 할때, skip Connection(add방식)을 하면 성능이 빠르게 좋아집니다.
+   * 3x3 kernel의 주변 값이 매우 작게 되어 빠르게 더 좋은 성능을 이끌어 낼수 있기 때문입니다.
+ * Transposed Convolution (확장)방식에 대한 이해 (각각의 커널값을 행렬곱하여 계산)
+
