@@ -29,3 +29,8 @@ $$m(\theta^*_\tau)\leftarrow \mathcal{P}_\tau(\mathcal{D}_\tau^{\text{valid}},\m
    * 3x3 kernel의 주변 값이 매우 작게 되어 빠르게 더 좋은 성능을 이끌어 낼수 있기 때문입니다.
  * Transposed Convolution (확장)방식에 대한 이해 (각각의 커널값을 행렬곱하여 계산)
 
+### pytorch_summary4
+* RNN 과 LSTM 을 실습과 이해
+  * RNN 은 vanishing gradient 현상이 나타나기 쉽지만, LSTM 은 이를 보완하기 위해 Cell state를 사용합니다.
+  * RNN 이 vanishing gradient 현상이 나타나기 쉬운 이유는 input 값이 매우 길어져서 dimension이 매우 늘어나기 때문에 발생합니다.
+  * 반면 LSTM 은 Cell state 에 필요한 정보를 끝까지 남겨놓음으로써 vanishing gradient 를 줄이고 있습니다.
