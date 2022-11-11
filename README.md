@@ -52,34 +52,34 @@ $$m(\theta^*_\tau)\leftarrow \mathcal{P}_\tau(\mathcal{D}_\tau^{\text{valid}},\m
 * 추천시스템의 이해
 * Content-based Filtering
  * 장점
-  * 유저가 구매, like, watch 했던 자료를 기반으로 추천하는 시스템입니다.
-  * 유저 개인의 자료만 중요(다른 유저의 자료는 필요 없음) 합니다.
-  * 유저 개인의 취향에 맞춰서 추천할 수 있습니다.
-  * 신제품 같은 구매이력이 없는 것도 추천 가능합니다.
+   * 유저가 구매, like, watch 했던 자료를 기반으로 추천하는 시스템입니다.
+   * 유저 개인의 자료만 중요(다른 유저의 자료는 필요 없음) 합니다.
+   * 유저 개인의 취향에 맞춰서 추천할 수 있습니다.
+   * 신제품 같은 구매이력이 없는 것도 추천 가능합니다.
  * 단점
-  * 유저의 특징을 추출하는 작업 자체가 어렵습니다. (이미지, 음악 등)
-  * 추천 편향이 생깁니다. 특히 추천하기 어려운 나쁜 퀄리티까지 추천될 가능성이 높습니다.
+   * 유저의 특징을 추출하는 작업 자체가 어렵습니다. (이미지, 음악 등)
+   * 추천 편향이 생깁니다. 특히 추천하기 어려운 나쁜 퀄리티까지 추천될 가능성이 높습니다.
  
 * Collaborative Filtering
  * 장점
-  * 다른 유저의 패턴을 고려하여 추천하는 시스템입니다.
-  * 콘텐츠에서 특징을 뽑을 작업이 필요 없습니다. (다른 유저의 패턴을 고려하므로)
+   * 다른 유저의 패턴을 고려하여 추천하는 시스템입니다.
+   * 콘텐츠에서 특징을 뽑을 작업이 필요 없습니다. (다른 유저의 패턴을 고려하므로)
  * 단점
-  * 충분한 유저의 자료가 있어야 비교가 가능합니다.
-  * 누구도 구매한 적이 없는 신상제품은 추천이 어렵습니다.
-  * 유저 개인의 독특한 취향을 적용하기 어렵습니다. 결국 인기상품의 추천이 될 가능성이 있습니다.
+   * 충분한 유저의 자료가 있어야 비교가 가능합니다.
+   * 누구도 구매한 적이 없는 신상제품은 추천이 어렵습니다.
+   * 유저 개인의 독특한 취향을 적용하기 어렵습니다. 결국 인기상품의 추천이 될 가능성이 있습니다.
   
   
 * Hybrid Filtering
- * 위 두가지 방법을 조합한 시스템입니다.
- * 단순 예측 결과를 합치는 방법, 다른 하나를 보완하는 방법, 하나의 모델로 합치는 방법 등이 있습니다.
+  * 위 두가지 방법을 조합한 시스템입니다.
+  * 단순 예측 결과를 합치는 방법, 다른 하나를 보완하는 방법, 하나의 모델로 합치는 방법 등이 있습니다.
  
 * DeepFM
  * Deep -> Deep Neural Network,    FM --> Factorization Machine
  * FM Machine part
-  * Sparse Feature(1,0,0,...) --> Embeding --> FM layer(inner Product) --> sigmoid function(output)
+   * Sparse Feature(1,0,0,...) --> Embeding --> FM layer(inner Product) --> sigmoid function(output)
  * DNN part 
-  * Sparse Feature(1,0,0,...) --> Embeding --> hidden layer --> sigmoid function(output)
+   * Sparse Feature(1,0,0,...) --> Embeding --> hidden layer --> sigmoid function(output)
  * FM 에서 사용했던 Embeding size 를 DNN Embeding 에도 사용하여 동시에 작업이 가능한 것이 특징입니다.
  
  
