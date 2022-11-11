@@ -34,3 +34,21 @@ $$m(\theta^*_\tau)\leftarrow \mathcal{P}_\tau(\mathcal{D}_\tau^{\text{valid}},\m
   * RNN 은 vanishing gradient 현상이 나타나기 쉽지만, LSTM 은 이를 보완하기 위해 Cell state를 사용합니다.
   * RNN 이 vanishing gradient 현상이 나타나기 쉬운 이유는 input 값이 매우 길어져서 dimension이 매우 늘어나기 때문에 발생합니다.
   * 반면 LSTM 은 Cell state 에 필요한 정보를 끝까지 남겨놓음으로써 vanishing gradient 를 줄이고 있습니다.
+  
+### pytorch_summary5
+* Transformer 구조 이해(self-attention, attention 구조)
+  * attention이란 한번에 입력된 sequence를 서로의 유사성을 통해 가중치를 부여하는 것입니다.
+  * Encoder 와 Decoder 로 나누어져 있습니다.
+  * Encoder :
+   * Encoder 는 positional encoding (위치정보) 를 거쳐 key, query, value 로 Multi-Head attention 에 들어갑니다.
+   * skip connection 을 통해 attention value 와 add 와 Norm 을 거쳐 Feed Foward를 해줍니다.
+   * Feed Forwad --> skip connection --> add&norm --> decoder 의 multi-head attention(value, key)
+  * Decoder :
+   * Output Embedding --> positional encoding --> masked Multi-Head Attention --> skip connection(add&norm)
+   * --> Multi-head Attention(input : encoder 의 value, key decoder 의 query) --> add&norm --> Feed Forward-->add&norm-->Linear -->softmax
+   * masked Multi-Head Attention 을 쓰는 이유는 한번에 입력된 sequence의 뒷부분을 치팅학습 하는 것을 방지하기 위해서입니다.
+   
+  
+  
+  * RNN 이 vanishing gradient 현상이 나타나기 쉬운 이유는 input 값이 매우 길어져서 dimension이 매우 늘어나기 때문에 발생합니다.
+  * 반면 LSTM 은 Cell state 에 필요한 정보를 끝까지 남겨놓음으로써 vanishing gradient 를 줄이고 있습니다.
